@@ -1,0 +1,242 @@
+from tkinter import *
+from tkinter import ttk
+
+first_window=Tk()
+first_window.minsize(height=400,width=300)
+first_window.title("HOME")
+first_window["bg"]="pink"
+
+def faculty():
+      first_window.destroy()
+      student_window=Tk()
+      student_window.minsize(height=400,width=300)
+      student_window.title("Faculty account")
+      student_window["bg"]="pink"
+#***************************************faculty login*************************************
+      def log():
+            student_window.destroy()
+            logwindow=Tk()
+            logwindow["bg"]="pink"
+            logwindow.title("login")
+            logwindow.minsize(height=400,width=300)
+            c=Canvas(logwindow,bg="gray",width=300,height=190)
+            c.place(x=1,y=95)
+            id=Label(logwindow,text="ID(phone number)",bg="gray",font="ar 10 bold")
+            password=Label(logwindow,text="PASSWORD",bg="gray",font="ar 10 bold")
+            id.place(x=80,y=110)
+            password.place(x=100,y=170)
+#to make comment box
+            identry=Entry(logwindow,textvariable="IntVar")
+            pasentry=Entry(logwindow,textvariable="StringVar")
+            identry.place(x=80,y=140)
+            pasentry.place(x=80,y=200)
+            def page():
+                logwindow.destroy()
+                fwindow=Tk()
+                fwindow.geometry("300x300")
+                fwindow.title("final page")
+                Label(fwindow,text="FINAL PAGE",font="ar 15").grid(row=5,column=3)
+            submit=Button(logwindow,text="SUBMIT",command=page)
+            submit.place(x=110,y=230)
+            logwindow.mainloop()
+#****************************************faculty registration******************************
+      def reg():
+            student_window.destroy()
+            regwindow=Tk()
+            regwindow["bg"]="pink"
+            regwindow.title("REGISTRATION PAGE")
+            regwindow.minsize(height=400,width=400)
+            Label(regwindow,text="Registration",bg="pink",font="ar 10 bold").grid(row=0,column=3)
+            def getvals():
+                regwindow.destroy()
+                student_final_page_window=Tk()
+                student_final_page_window.geometry("500x500")
+                Label(student_final_page_window,text="Your all data is now saved in our server",font="ar 15").grid(row=5,column=3)
+#All input data from user
+    
+            fname=Label(regwindow,text="FIRST NAME",bg="pink")
+            mname=Label(regwindow,text="MIDDLE NAME",bg="pink")
+            lname=Label(regwindow,text="LAST NAME",bg="pink")
+            email=Label(regwindow,text="EMAIL-ID",bg="pink")
+            phone=Label(regwindow,text="PHONE NUMBER",bg="pink")
+
+    #To print all text 
+
+            fname.grid(row=1,column=2)
+            mname.grid(row=2,column=2)
+            lname.grid(row=3,column=2)
+            email.grid(row=4,column=2)
+            phone.grid(row=5,column=2)
+    #Entry field value(create a comment box)
+
+            fnameentry=Entry(regwindow,textvariable=StringVar)
+            mnameentry=Entry(regwindow,textvariable=StringVar)
+            lnameentry=Entry(regwindow,textvariable=StringVar)
+            emailentry=Entry(regwindow,textvariable=StringVar)
+            phoneentry=Entry(regwindow,textvariable=IntVar)
+
+    #pack all entry fields
+
+            fnameentry.grid(row=1,column=4)
+            mnameentry.grid(row=2,column=4)
+            lnameentry.grid(row=3,column=4)
+            emailentry.grid(row=4,column=4)
+            phoneentry.grid(row=5,column=4)
+ 
+#Create checkbox button
+
+            checkbuttn=ttk.Checkbutton(regwindow,text="Check all data").place(x=100,y=130)
+
+#Create submit button
+            submit=Button(text="SUBMIT",command=getvals)
+            submit.place(x=120,y=160)
+            regwindow.mainloop()    
+#**********make a login and registration button**************
+      c0=Canvas(student_window,bg="blue",width=800,height=35)
+      c0.place(x=1,y=99)
+      c00=Canvas(student_window,bg="blue",width=800,height=35)
+      c00.place(x=1,y=160)
+    
+      frame3=Frame(student_window,borderwidth=6,bg="grey",relief=SUNKEN)
+      frame3.place(x=105,y=100)
+      frame4=Frame(student_window,borderwidth=6,bg="grey",relief=SUNKEN)
+      frame4.place(x=78,y=160)
+      login=Button(frame3,text="LOG-IN",bg="pink",font="ar 10 bold",command=log)
+      login.pack()
+      llabel=Label(student_window,text="already have an account ?",font="ar 7 bold",bg="pink")
+      llabel.place(x=85,y=142)
+      registration=Button(frame4,bg="pink",text="REGISTRATION",font="ar 10 bold",command=reg)  
+      registration.pack()
+      llabel=Label(student_window,text="Create a new account",font="ar 7 bold",bg="pink")
+      llabel.place(x=90,y=205)
+      
+      student_window.mainloop()
+
+#*****************************************students page*************************************
+
+def student():
+      first_window.destroy()
+      student_window=Tk()
+      student_window.minsize(height=400,width=300)
+      student_window.title("student account")
+      student_window["bg"]="pink"
+#***************************************student login*************************************
+      def log():
+            student_window.destroy()
+            logwindow=Tk()
+            logwindow["bg"]="pink"
+            logwindow.title("login")
+            logwindow.minsize(height=400,width=300)
+            c=Canvas(logwindow,bg="gray",width=300,height=190)
+            c.place(x=1,y=95)
+            id=Label(logwindow,text="ID(phone number)",bg="gray",font="ar 10 bold")
+            password=Label(logwindow,text="PASSWORD",bg="gray",font="ar 10 bold")
+            id.place(x=80,y=110)
+            password.place(x=100,y=170)
+#to make comment box
+            identry=Entry(logwindow,textvariable="IntVar")
+            pasentry=Entry(logwindow,textvariable="StringVar")
+            identry.place(x=80,y=140)
+            pasentry.place(x=80,y=200)
+            def page():
+                logwindow.destroy()
+                fwindow=Tk()
+                fwindow.geometry("300x300")
+                fwindow.title("final page")
+                Label(fwindow,text="FINAL PAGE",font="ar 15").grid(row=5,column=3)
+            submit=Button(logwindow,text="SUBMIT",command=page)
+            submit.place(x=110,y=230)
+            logwindow.mainloop()
+#****************************************student registration******************************
+      def reg():
+            student_window.destroy()
+            regwindow=Tk()
+            regwindow["bg"]="pink"
+            regwindow.title("REGISTRATION PAGE")
+            regwindow.minsize(height=400,width=400)
+            Label(regwindow,text="Registration",bg="pink",font="ar 10 bold").grid(row=0,column=3)
+            def getvals():
+                regwindow.destroy()
+                student_final_page_window=Tk()
+                student_final_page_window.geometry("500x500")
+                Label(student_final_page_window,text="Your all data is now saved in our server",font="ar 15").grid(row=5,column=3)
+#All input data from user
+    
+            fname=Label(regwindow,text="FIRST NAME",bg="pink")
+            mname=Label(regwindow,text="MIDDLE NAME",bg="pink")
+            lname=Label(regwindow,text="LAST NAME",bg="pink")
+            email=Label(regwindow,text="EMAIL-ID",bg="pink")
+            phone=Label(regwindow,text="PHONE NUMBER",bg="pink")
+
+    #To print all text 
+
+            fname.grid(row=1,column=2)
+            mname.grid(row=2,column=2)
+            lname.grid(row=3,column=2)
+            email.grid(row=4,column=2)
+            phone.grid(row=5,column=2)
+    #Entry field value(create a comment box)
+
+            fnameentry=Entry(regwindow,textvariable=StringVar)
+            mnameentry=Entry(regwindow,textvariable=StringVar)
+            lnameentry=Entry(regwindow,textvariable=StringVar)
+            emailentry=Entry(regwindow,textvariable=StringVar)
+            phoneentry=Entry(regwindow,textvariable=IntVar)
+
+    #pack all entry fields
+
+            fnameentry.grid(row=1,column=4)
+            mnameentry.grid(row=2,column=4)
+            lnameentry.grid(row=3,column=4)
+            emailentry.grid(row=4,column=4)
+            phoneentry.grid(row=5,column=4)
+ 
+#Create checkbox button
+
+            checkbuttn=ttk.Checkbutton(regwindow,text="Check all data").place(x=100,y=130)
+
+#Create submit button
+            submit=Button(text="SUBMIT",command=getvals)
+            submit.place(x=120,y=160)
+            regwindow.mainloop()    
+#**********make a login and registration button**************
+      c0=Canvas(student_window,bg="blue",width=800,height=35)
+      c0.place(x=1,y=99)
+      c00=Canvas(student_window,bg="blue",width=800,height=35)
+      c00.place(x=1,y=160)
+    
+      frame3=Frame(student_window,borderwidth=6,bg="grey",relief=SUNKEN)
+      frame3.place(x=105,y=100)
+      frame4=Frame(student_window,borderwidth=6,bg="grey",relief=SUNKEN)
+      frame4.place(x=78,y=160)
+      login=Button(frame3,text="LOG-IN",bg="pink",font="ar 10 bold",command=log)
+      login.pack()
+      llabel=Label(student_window,text="already have an account ?",font="ar 7 bold",bg="pink")
+      llabel.place(x=85,y=142)
+      registration=Button(frame4,bg="pink",text="REGISTRATION",font="ar 10 bold",command=reg)  
+      registration.pack()
+      llabel=Label(student_window,text="Create a new account",font="ar 7 bold",bg="pink")
+      llabel.place(x=90,y=205)
+      
+      student_window.mainloop()
+#*************************print students and teachers log in in tkinter window*************************************
+
+choose_account=Label(first_window,text="Please choose a account",font="ar 8 ",bg="pink")
+choose_account.place(x=85,y=50)
+
+c1=Canvas(first_window,bg="brown",width=800,height=25)
+c1.place(x=1,y=95)
+c2=Canvas(first_window,bg="brown",width=800,height=25)
+c2.place(x=1,y=222)
+#create student frame
+frame=Frame(first_window,borderwidth=6,bg="red",relief=SUNKEN)
+frame.place(x=110,y=130)
+student_acc=Button(frame,fg="red",text="STUDENT",command=student,bg="pink")
+student_acc.pack()
+#create faculty frame
+frame1=Frame(first_window,borderwidth=6,bg="red",relief=SUNKEN)
+frame1.place(x=110,y=180)
+faculty_acc=Button(frame1,fg="red",command=faculty,text="FACULTY",bg="pink")
+faculty_acc.pack()
+
+first_window.mainloop()
