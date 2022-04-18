@@ -1,0 +1,5 @@
+import os
+filepath=os.path.join(F2021 - CopyAPRIL,Myfile.txt)
+if not os.path.exists(F2021 - CopyAPRIL)
+    os.makedirs(F2021 - CopyAPRIL)
+f=open(filepath,a)
