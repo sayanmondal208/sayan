@@ -1,0 +1,17 @@
+T=int(input())
+list=[]
+for i in range(T):
+    def volume(min,max):
+        if min>max:
+            return min-max
+        else:
+            return max-min
+    a,b=input().split()
+    a=int(a)
+    b=int(b)
+    x=volume(a,b)
+    list.append(x)
+var="OUtput".upper()
+print(var)
+for i in range(T):
+    print(list[i],end="\n")
